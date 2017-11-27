@@ -17,6 +17,7 @@ int fibiter (int n) {
   }
   return a;
 }
+
 int fibrt_aux (int n, int crt, int a, int b) {
   if (n < crt)
 	return a;
@@ -25,6 +26,7 @@ int fibrt_aux (int n, int crt, int a, int b) {
 int fibrt (int n) {
   return fibrt_aux (n, 2, 1, 1);
 }
+
 int main () {
   int a, b;
 
