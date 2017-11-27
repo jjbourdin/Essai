@@ -17,11 +17,19 @@ int fibiter (int n) {
   }
   return a;
 }
+int fibrt_aux (int n, int crt, int a, int b) {
+  if (n < crt)
+	return a;
+  return fibrt_aux (n, crt + 1, a+ b, a);
+}
+int fibrt (int n) {
+  return fibrt_aux (n, 2, 1, 1);
+}
 int main () {
   int a, b;
 
   for (a = 0; a < 20; a++) {
-	b = fibiter (a);
+	b = fibrt (a);
 	printf(" fibiter (%d) == %d\n", a, b);
   }
 }
