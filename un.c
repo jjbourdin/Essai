@@ -17,7 +17,7 @@ int fibiter (int n) {
   }
   return a;
 }
-
+/* recursive terminale */
 int fibrt_aux (int n, int crt, int a, int b) {
   if (n < crt)
 	return a;
